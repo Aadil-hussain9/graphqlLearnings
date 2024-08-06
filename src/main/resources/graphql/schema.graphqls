@@ -1,0 +1,40 @@
+type Query {
+    books: [Book]
+    bookById(id: Int): Book
+    allAuthors: [Author]
+    authorById(id: Int): Author
+}
+
+type Mutation{
+    createBook(bookInput : BookInput):Book
+    createAuthor(authorName:String!):Author
+}
+
+type Subscription {
+    newMessage : String
+}
+
+type Book {
+    id: Int
+    name: String
+    pageCount: Int
+    author: Author
+}
+
+type Author {
+    id: Int
+    name: String
+    books: [Book]
+}
+
+input BookInput {
+    name: String
+    pageCount: Int
+    authorId: Int
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}

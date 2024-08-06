@@ -1,0 +1,15 @@
+1. Query
+A query is used to read or fetch data from the server.
+It's analogous to a GET request in RESTful APIs. Queries are designed to be idempotent,
+meaning they do not change the server's state.
+
+2. Mutation
+A mutation is used to modify data on the server.
+It's analogous to POST, PUT, DELETE, etc., in RESTful APIs.
+Mutations are designed to change the server's state and may have side effects.
+
+3. 3. Subscription
+A subscription is used for real-time updates.
+It's analogous to WebSockets or Server-Sent Events (SSE) in traditional
+web development.
+Subscriptions allow the server to push updates to the client when specific events occur.
